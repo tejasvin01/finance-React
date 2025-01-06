@@ -1,0 +1,93 @@
+/* From Uiverse.io by ubaidi10 */ 
+.carrd {
+    width: fit-content;
+    height: fit-content;
+    background-color: #5ea2f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto; /* Center align on the x-axis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrd:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: #555151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 50%;
+}
+
+/* instagram */
+.containerOne:hover {
+    background-color: #d62976;
+    transform: scale(1.2);
+}
+
+/* call */
+.containerOneo:hover {
+    background-color: #1135ed;
+    transform: scale(1.2);
+}
+
+/* linkedin */
+.containerThree:hover {
+    background-color: #0072b1;
+    transform: scale(1.2);
+}
+
+/* Whatsapp */
+.containerFour:hover {
+    background-color: #25d366;
+    transform: scale(1.2);
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+}
+
+.socialSvg {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.socialSvg path {
+    fill: #ffffff;
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer-info {
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
