@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./upload.css";
 
 const Upload = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         ExpenseTitle: "",
         Amount: "",
@@ -40,7 +42,7 @@ const Upload = () => {
             } else {
                 alert("Something went wrong while storing the information.");
             }
-            window.location.href = "/home";
+            navigate("/home");
         } catch (error) {
             console.error("Error:", error);
             alert("Something went wrong.");
