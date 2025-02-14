@@ -10,7 +10,7 @@ const FinanceInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/${id}`);
+        const response = await fetch(`https://finance-react.onrender.com/${id}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

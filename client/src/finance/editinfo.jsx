@@ -18,7 +18,7 @@ const [form, setForm] = useState({
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/editinfo/${id}`)
+    fetch(`https://finance-react.onrender.com/editinfo/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -50,7 +50,7 @@ const [form, setForm] = useState({
       alert("Please fill in all required fields.");
       return;
     }
-    fetch(`http://localhost:5000/editinfo/${id}`, {
+    fetch(`https://finance-react.onrender.com/editinfo/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

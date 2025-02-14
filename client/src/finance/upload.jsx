@@ -24,7 +24,7 @@ const Upload = () => {
         });
     };
 
-    const api_url = "http://localhost:5000/upload"; // Replace with your actual API endpoint
+    const api_url = "https://finance-react.onrender.com/upload"; 
 
     const handleSubmit = async () => {
         try {

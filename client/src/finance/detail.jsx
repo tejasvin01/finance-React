@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./detail.css";
 import "./editinfo";
-const api_url = "http://localhost:5000/detail";
+const api_url = "https://finance-react.onrender.com/detail";
 
 const Detail = () => {
   const [data, setData] = useState([]);

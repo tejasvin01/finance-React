@@ -4,7 +4,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
-const API_URL = "http://localhost:5000/home";
+const API_URL = "https://finance-react.onrender.com/home";
 const Home = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
