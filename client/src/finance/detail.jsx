@@ -24,7 +24,7 @@ const Detail = () => {
       .then((data) => {
         console.log("Deleted: ", data);
         setRefresh((prev) => !prev);
-        window.location.reload(); // Reload the page after deletion
+        setData((prevData) => prevData.filter((item) => item.id !== id));
       })
       .catch((error) => console.error("Error deleting data: ", error));
   };
