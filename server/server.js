@@ -8,10 +8,10 @@ app.use(cors());
 
 app.use(bodyParser.json());
 const connection = sql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "1234",
-  database: "express",
+  host: "beeetigt16ppt7xbshks-mysql.services.clever-cloud.com",
+  user: "ub0kxxnf3meohlfz",
+  password: "ZrOKTX7TBnIJW6YJ6NtT",
+  database: "beeetigt16ppt7xbshks",
 });
 connection.connect(function (err) {
   if (err) {
