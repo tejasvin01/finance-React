@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./detail.css";
 import "./editinfo";
+import { useNavigate } from "react-router-dom";
 const api_url = "https://finance-react.onrender.com/detail";
 
 const Detail = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(api_url)
@@ -59,9 +61,13 @@ const Detail = () => {
               <td>{item.BudgetCategory}</td>
               <td>{item.Note}</td>
               <td>
-                <a href={`/editinfo/${item.id}`} className="btn btn-primary">
+
+                <button
+                  className="btn btn-primary"
+                  onClick={() => navigate(`/editinfo/${item.id}`)}
+                >
                   Edit
-                </a>
+                </button>
                 <button
                   className="btn btn-danger"
                   onClick={() => handleDelete(item.id)}

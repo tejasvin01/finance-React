@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 const FinanceInfo = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [financeDetails, setFinanceDetails] = useState(null);
   const [error, setError] = useState(null); // Define the error state
-
+  const api_url = "https://finance-react.onrender.com";
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://finance-react.onrender.com/${id}`);
+        const response = await fetch(`${api_url}/${id}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -58,9 +59,12 @@ const FinanceInfo = () => {
               <strong>{formatLabel(key)}:</strong> {String(value)}
             </p>
           ))}
-          <a href={`editinfo/${id}`} style={styles.editLink}>
-            <button style={{ ...styles.button, backgroundColor: 'blue', color: 'white' }}>Edit Details</button>
-          </a>
+          <button
+            style={{ ...styles.button, backgroundColor: 'blue', color: 'white' }}
+            onClick={() => navigate(`/editinfo/${id}`)}
+          >
+            Edit Details
+          </button>
         </div>
       </div>
     </div>
