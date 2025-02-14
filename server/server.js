@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const sql = require("mysql2");
 const cors = require("cors");
+const port = process.env.PORT || 4000;
 app.use(cors()); 
 
 app.use(bodyParser.json());
@@ -155,6 +156,6 @@ app.delete("/detail/:id", async (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
